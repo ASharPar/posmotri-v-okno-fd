@@ -25,7 +25,7 @@ html {
 .button {
   background-color: transparent;
   border: 1px solid white;
-  height: 34px;
+  min-height: 34px;
   color:#fff;
   text-align: center;
   line-height: 21.6px;
@@ -58,11 +58,12 @@ fieldset {
   margin-top: 78px;
   margin-bottom: 16px;
   position: relative;
+  height: 388px;
 }
 
 .result__video {
   width: 100%;
-  height: 386px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -118,8 +119,8 @@ input[type="text"] {
 
 .search-form__pseudo-checkbox {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 19px;
+  height: 19px;
   border: 1px solid white;
   position: relative;
 }
@@ -141,10 +142,10 @@ ol {
 
 .title{
   font-size: 75px;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   line-height: 70.5px;
   text-transform: uppercase;
-  margin-bottom: 26px;
+  margin-bottom: 23px;
 }
 
 .content__accent{
@@ -152,15 +153,11 @@ ol {
 }
 
 .content__list-container {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 298px;
   width: 100%;
   position: relative;
   padding: 3px;
-}
-
-.content__list {
-  padding: 1px;
 }
 
 .content__list-item {
@@ -174,24 +171,22 @@ ol {
   display: block;
 }
 
-.content__card-link_current:active {
+.content__card-link_current {
   background-color: #545050;
 }
 
 .content__video-card {
   display: flex;
-  gap: 2px;
 }
 
 .content__video-card-description-container {
-  flex-basis: 0;
   flex-grow: 1;
-  overflow: hidden;
+  max-width: 194px;
 }
 
 .content__video-card-title {
   color: #fff;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -206,6 +201,7 @@ ol {
   font-size: 18px;
   line-height: 16.2px;
   font-weight: 400;
+  line-clamp: 1;
 }
 
 .content__video-card-thumbnail {
